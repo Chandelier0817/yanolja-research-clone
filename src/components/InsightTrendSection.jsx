@@ -103,28 +103,27 @@ function InsightTrendSection() {
           </Swiper>
         </div>
 
-        {/* 동향보고서 */}
         <div className="trend-slider-wrap">
-          <Swiper
-            modules={[Pagination, Navigation]}
-            navigation
-            pagination={{ clickable: true }}
-            spaceBetween={28}
-            slidesPerView={1.3}
-          >
-            {trendReports.map((item) => (
-              <SwiperSlide key={item.id}>
-                <article className="trend-card">
-                  <img src={item.img} className="trend-card-img" />
-                  <div className="trend-card-body">
-                    <h3 className="trend-title">{item.title}</h3>
-                    <p className="card-date">{item.date}</p>
-                  </div>
-                </article>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+  <Swiper
+    modules={[Pagination]}
+    pagination={{ clickable: true }}
+    spaceBetween={24}
+    slidesPerView={1}
+  >
+    {trendReports.map((item, index) => (
+      <SwiperSlide key={index}>
+        <article className="trend-card">
+          <img src={item.img} alt="" className="trend-thumb" />
+          <div className="trend-body">
+            <h3 className="trend-title">{item.title}</h3>
+            <p className="card-date">{item.date}</p>
+          </div>
+        </article>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
       </div>
     </section>
   );
