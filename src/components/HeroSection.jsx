@@ -55,8 +55,9 @@ function HeroSection() {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-
-  return (
+  const [menuOpen, setMenuOpen] = useState(false);
+  
+ return (
     <section className="section hero-section">
       <div className="container hero-layout">
         {/* 메인 슬라이드 */}
@@ -145,10 +146,9 @@ function HeroSection() {
     <img src="/images/icon/arrow_right.svg" alt="다음" />
   </button>
 </div>
+</div>
 
-        </div>
-
-        <aside className="hero-side">
+<aside className="hero-side">
 
   {/* 1. 야놀자 매력도 지수 */}
   <button type="button" className="hero-side-button">

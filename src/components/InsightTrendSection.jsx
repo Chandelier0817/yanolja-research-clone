@@ -65,12 +65,13 @@ function InsightTrendSection() {
       {/* 제목 */}
       <div className="container insight-header-row">
         <div className="section-title-group">
-          <h2 className="section-title-main">인사이트 / 브리프</h2>
-          <button className="section-more-button">&gt;</button>
+          <button className="section-more-button">
+            <h2 className="section-title-main">인사이트 / 브리프 &gt;</h2>
+          </button>
         </div>
         <div className="section-title-group">
-          <h2 className="section-title-main">동향보고서</h2>
-          <button className="section-more-button">&gt;</button>
+          
+          <button className="section-more-button"><h2 className="section-title-main">동향보고서 &gt;</h2></button>
         </div>
       </div>
 

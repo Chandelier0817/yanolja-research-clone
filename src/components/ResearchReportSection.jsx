@@ -8,32 +8,32 @@ const researchReports = [
   {
     id: 1,
     vol: "Vol.5",
-    title: "지역관광의 경제효과와 활성화 방안",
-    date: "2025.02.07"
+    date: "2025.02.07",
+    img: "/images/report/img1.jpg"
   },
   {
     id: 2,
     vol: "Vol.4",
-    title: "특허 데이터를 활용한 관광산업 기술 트렌드 분석",
-    date: "2025.01.09"
+    date: "2025.01.09",
+    img: "/images/report/img2.png"
   },
   {
     id: 3,
     vol: "Vol.3",
-    title: "호텔 객실 가격 결정을 위한 Revenue Management 연구",
-    date: "2024.04.11"
+    date: "2024.04.11",
+    img: "/images/report/img3.png"
   },
   {
     id: 4,
     vol: "Vol.2",
-    title: "숙박업의 변화와 규제 개선방안",
-    date: "2024.02.29"
+    date: "2024.02.29",
+    img: "/images/report/img4.png"
   },
   {
     id: 5,
     vol: "Vol.1",
-    title: "플랫폼 경제와 관광산업",
-    date: "2024.01.30"
+    date: "2024.01.30",
+    img: "/images/report/img5.png"
   }
 ];
 
@@ -42,9 +42,9 @@ function ResearchReportSection() {
     <section className="section section-bg-beige research-section">
       <div className="container">
         <div className="section-header-line">
-          <h2 className="section-title-main">연구보고서</h2>
+          
           <button type="button" className="section-more-button">
-            &gt;
+            <h2 className="section-title-main">연구보고서 &gt;</h2>
           </button>
         </div>
 
@@ -65,9 +65,8 @@ function ResearchReportSection() {
               <SwiperSlide key={item.id}>
                 <article className="research-card">
                   <div className="research-cover-placeholder">
-                    {/* 실제 커버 이미지 대신 비워둠 */}
-                    COVER
-                  </div>
+  <img src={item.img} alt={item.title} className="research-cover" />
+</div>
                   <div className="research-meta">
                     <p className="research-title">{item.title}</p>
                     <p className="card-date">{item.date}</p>
